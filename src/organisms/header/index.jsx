@@ -1,13 +1,32 @@
 import Link from "next/link";
 import React from "react";
+import styled from "@emotion/styled";
+
+const StyledLink = styled(Link)`
+	//test
+`;
+
+const StyledHeader = styled.header`
+	display: flex;
+	height: 40px;
+`;
+
+const StyledNav = styled.nav`
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	background: black;
+	color: aliceblue;
+`;
 
 const Header = () => {
 	return (
-		<header>
-			<nav data-test-id="navigation">
+		<StyledHeader>
+			<StyledNav data-test-id="navigation">
 				<Link href="/">Home</Link>
-			</nav>
-		</header>
+			</StyledNav>
+		</StyledHeader>
 	);
 };
 
