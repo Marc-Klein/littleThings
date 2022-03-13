@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import Layout from "../organisms/layout";
+import ProjectLinks from "../organisms/project-links";
 
 const Page = () => {
 	return (
@@ -9,6 +10,7 @@ const Page = () => {
 				<title key="title">My Project</title>
 				<meta key="description" name="description" content="Little Projects" />
 			</Head>
+			<ProjectLinks />
 		</Layout>
 	);
 };
