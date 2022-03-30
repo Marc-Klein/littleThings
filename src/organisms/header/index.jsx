@@ -8,6 +8,8 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { useState } from "react";
 
 const Header = () => {
+	const menu = ["Home", "About Me"];
+
 	const [isOpen, setOpen] = useState(0);
 	const [isClosed, setClosed] = useState(0);
 
