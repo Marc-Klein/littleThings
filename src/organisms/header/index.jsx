@@ -7,11 +7,9 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
+import MenuList from "../menu-list";
 import { useState } from "react";
-
-const menu = ["Home"];
 
 const Header = () => {
 	const [isOpen, setOpen] = useState("");
@@ -66,11 +64,9 @@ const Header = () => {
 							}}
 							onClose={handleCloseMenu}
 						>
-							{menu.map(page => (
-								<MenuItem key={page} onClick={handleCloseMenu}>
-									<Typography textAlign="center">{page}</Typography>
-								</MenuItem>
-							))}
+							<MenuItem>
+								<MenuList />
+							</MenuItem>
 						</Menu>
 					</Box>
 					<Typography
@@ -82,15 +78,7 @@ const Header = () => {
 						Little Projects
 					</Typography>
 					<Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-						{menu.map(page => (
-							<Button
-								key={page}
-								sx={{ my: 2, color: "white", display: "block" }}
-								onClick={handleCloseMenu}
-							>
-								{page}
-							</Button>
-						))}
+						<MenuList />
 					</Box>
 				</Toolbar>
 			</Container>
