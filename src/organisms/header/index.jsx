@@ -11,6 +11,17 @@ import MenuItem from "@mui/material/MenuItem";
 import MenuList from "../menu-list";
 import { useState } from "react";
 
+/*
+ * Todo
+ *  - Implement Links in Menu List
+ *  - fix responsiveness -> List items should display beside
+ *  - maybe put useState in Menu List Component
+ *  - Next Link with emotion ?
+ *
+ *
+ *
+ * */
+
 const Header = () => {
 	const [isOpen, setOpen] = useState("");
 
