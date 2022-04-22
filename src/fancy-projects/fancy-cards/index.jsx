@@ -1,7 +1,11 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import StyledBody from "../../organisms/body";
 import styled from "@emotion/styled";
-import Waterfall from "../../fancy-projects/fancy-cards/imgs/blake-verdoorn-cssvEZacHvQ-unsplash.jpg"
+import Waterfall from "../fancy-cards/imgs/blake-verdoorn-cssvEZacHvQ-unsplash.jpg";
+import SunsetCar from "../fancy-cards/imgs/jakob-rosen-HZXUBrOv8Ag-unsplash.jpg";
+import Bicycle from "../fancy-cards/imgs/janosch-diggelmann-Uc6EeOLHkok-unsplash.jpg";
+import Waves from "../fancy-cards/imgs/shifaaz-shamoon-9K9ipjhDdks-unsplash.jpg";
+import Pyramids from "../fancy-cards/imgs/alex-azabache-MoonoldXeqs-unsplash.jpg";
 
 const Container = styled.div`
 	display: flex;
@@ -12,9 +16,9 @@ const Panel = styled.div`
 	background-size: auto 100%;
 	background-position: center;
 	background-repeat: no-repeat;
-	height:80vh;
+	height: 80vh;
 	border-radius: 50px;
-	color:aliceblue;
+	color: aliceblue;
 	cursor: pointer;
 	flex: 0.5;
 	margin: 10px;
@@ -23,21 +27,42 @@ const Panel = styled.div`
 `;
 
 const FancyCards = () => {
-	const [isActive, setActive] = useState("false")
+	const [isActive, setActive] = useState("false");
 
-	const handleToggle = ()=> {
+	const handleToggle = () => {
 		return setActive(!isActive);
-	}
-
-	<StyledBody>
-		<Container>
-			<Panel className={`${isActive ? "active" : ""}`} style={} onClick={handleToggle}/>
-			<Panel className={`${isActive ? "active" : ""}`} style={} onClick={handleToggle}/>
-			<Panel className={`${isActive ? "active" : ""}`} style={} onClick={handleToggle}/>
-			<Panel className={`${isActive ? "active" : ""}`} style={} onClick={handleToggle}/>
-			<Panel className={`${isActive ? "active" : ""}`} style={} onClick={handleToggle}/>
-		</Container>
-	</StyledBody>;
+	};
+	return (
+		<StyledBody>
+			<Container>
+				<Panel
+					className={`${isActive ? "active" : ""}`}
+					style={{ backgroundImage: `url(${Waterfall})` }}
+					onClick={handleToggle}
+				/>
+				<Panel
+					className={`${isActive ? "active" : ""}`}
+					style={{ backgroundImage: `url(${SunsetCar})` }}
+					onClick={handleToggle}
+				/>
+				<Panel
+					className={`${isActive ? "active" : ""}`}
+					style={{ backgroundImage: `url(${Waves})` }}
+					onClick={handleToggle}
+				/>
+				<Panel
+					className={`${isActive ? "active" : ""}`}
+					style={{ backgroundImage: `url(${Bicycle})` }}
+					onClick={handleToggle}
+				/>
+				<Panel
+					className={`${isActive ? "active" : ""}`}
+					style={{ backgroundImage: `url(${Pyramids})` }}
+					onClick={handleToggle}
+				/>
+			</Container>
+		</StyledBody>
+	);
 };
 
 export default FancyCards;
