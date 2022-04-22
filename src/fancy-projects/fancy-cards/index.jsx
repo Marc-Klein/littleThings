@@ -26,6 +26,13 @@ const Panel = styled.div`
 	transition: flex 0.7s ease-in;
 `;
 
+const StyledHeading = styled.h3`
+	font-size: 24px;
+	position: absolute;
+	bottom: 20px;
+	left: 20px;
+`;
+
 const FancyCards = () => {
 	const [isActive, setActive] = useState("false");
 
@@ -39,27 +46,37 @@ const FancyCards = () => {
 					className={`${isActive ? "active" : ""}`}
 					style={{ backgroundImage: `url(${Waterfall})` }}
 					onClick={handleToggle}
-				/>
+				>
+					<StyledHeading>Waterfall</StyledHeading>
+				</Panel>
 				<Panel
 					className={`${isActive ? "active" : ""}`}
 					style={{ backgroundImage: `url(${SunsetCar})` }}
 					onClick={handleToggle}
-				/>
+				>
+					<StyledHeading>Sunset Car</StyledHeading>
+				</Panel>
 				<Panel
 					className={`${isActive ? "active" : ""}`}
 					style={{ backgroundImage: `url(${Waves})` }}
 					onClick={handleToggle}
-				/>
+				>
+					<StyledHeading>Waves</StyledHeading>
+				</Panel>
 				<Panel
 					className={`${isActive ? "active" : ""}`}
 					style={{ backgroundImage: `url(${Bicycle})` }}
 					onClick={handleToggle}
-				/>
+				>
+					<StyledHeading>Bicycle</StyledHeading>
+				</Panel>
 				<Panel
 					className={`${isActive ? "active" : ""}`}
 					style={{ backgroundImage: `url(${Pyramids})` }}
 					onClick={handleToggle}
-				/>
+				>
+					<StyledHeading>Pyramids</StyledHeading>
+				</Panel>
 			</Container>
 		</StyledBody>
 	);
